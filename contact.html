@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Bhavani M.K.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="index.html">Bhavani M.K.</a>
+<nav aria-label="Main">
+<ul id="nav-list">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html" aria-current="page">Contact</a></li>
+<li><button id="theme" type="button">Theme</button></li>
+</ul>
+</nav>
+<button id="menu" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
+</div></header>
+<main>
+<section><div class="wrap">
+<h2>Contact me</h2>
+<p style="margin-bottom:24px;color:var(--muted)">Email <a href="mailto:bhavani@gmail.com">bhavani@gmail.com</a> or use the form. Not sure yet? Check my <a href="projects.html">projects</a> or <a href="about.html">background</a> first.</p>
+<form id="contact-form" novalidate>
+<label>Name<input id="name" name="name" autocomplete="name"><span class="err" data-for="name"></span></label>
+<label>Email<input id="email" name="email" type="email" autocomplete="email"><span class="err" data-for="email"></span></label>
+<label>Message<textarea id="message" name="message" rows="5"></textarea><span class="err" data-for="message"></span></label>
+<button class="btn" type="submit">Send message</button>
+<p id="status" role="status"></p>
+</form></div></section>
+</main>
+<footer><div class="wrap">
+<span>© 2026 Bhavani M.K.</span>
+<ul>
+<li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li>
+</ul>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
