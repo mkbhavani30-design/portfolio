@@ -57,3 +57,35 @@ form?.addEventListener("submit", e => {
     ? "Thanks! Your message is ready to send (connect a form service to deliver it)." : "";
   if (ok) form.reset();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filters button');
+  const cards = document.querySelectorAll('.grid .card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove 'on' class and update aria-pressed for all buttons
+      filterButtons.forEach(btn => {
+        btn.classList.remove('on');
+        btn.setAttribute('aria-pressed', 'false');
+      });
+
+      // Add 'on' class and update aria-pressed for the clicked button
+      button.classList.add('on');
+      button.setAttribute('aria-pressed', 'true');
+
+      const filterValue = button.getAttribute('data-filter');
+
+      // Show or hide cards based on the selected filter
+      cards.forEach(card => {
+        const cardType = card.getAttribute('data-type');
+        
+        if (filterValue === 'all' || cardType === filterValue) {
+          card.style.display = ''; // Reset to default display
+        } else {
+          card.style.display = 'none'; // Hide non-matching cards
+        }
+      });
+    });
+  });
+});
